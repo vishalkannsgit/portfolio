@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error Page</title>
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: #1e1e2f;
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen text-white">
+
+  <!-- Lottie Animation -->
+  <dotlottie-wc 
+    src="https://lottie.host/5584620d-240c-4631-acbc-5a89175cf083/76RCaw2B1Q.lottie" 
+    style="width: 300px; height: 300px;" 
+    speed="1" 
+    autoplay 
+    loop>
+  </dotlottie-wc>
+
+  <!-- Error Text -->
+  <h1 id="error-code" class="text-5xl font-bold mt-6 mb-2 text-red-500"></h1>
+  <p id="error-message" class="text-xl text-gray-300 mb-6"></p>
+
+  <!-- Back Button -->
+  <a href="/" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-lg transition font-semibold">
+    Go Back Home
+  </a>
+
+  <script>
+    // Determine error type dynamically
+    const params = new URLSearchParams(window.location.search);
+    const errorType = params.get('type') || '404';
+    
+    let code = '404';
+    let message = 'Page Not Found';
+
+    if(errorType === 'project') {
+      code = 'Project Not Found';
+      message = 'The project you are looking for does not exist or has been removed.';
+    } else if(errorType === '500') {
+      code = '500';
+      message = 'Internal Server Error. Please try again later.';
+    }
+
+    document.getElementById('error-code').textContent = code;
+    document.getElementById('error-message').textContent = message;
+  </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fake News Classifier | Vishal Kanna B</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body class="bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-pink-400">Fake News Classifier</h1>
+      <div class="space-x-6 text-gray-300 hidden md:flex">
+         <button onclick="history.back()" class="px-3 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition">
+        ← Back
+      </button>
+        <a href="#overview" class="hover:text-pink-400">Overview</a>
+        <a href="#workflow" class="hover:text-pink-400">Workflow</a>
+        <a href="#results" class="hover:text-pink-400">Results</a>
+        <a href="#dataset" class="hover:text-pink-400">Dataset</a>
+        <a href="#tech" class="hover:text-pink-400">Tech Stack</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-[70vh] flex items-center justify-center px-6 text-center relative">
+    <div class="max-w-3xl">
+      <h2 class="text-4xl md:text-6xl font-extrabold mb-6 text-white">Fake News Classifier</h2>
+      <p class="text-lg text-gray-300 mb-6">A deep learning project using NLP to identify and classify fake news articles.</p>
+      <a href="#overview" class="px-6 py-3 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-2xl shadow-lg">Explore Project</a>
+    </div>
+    <div class="absolute bottom-10 right-10 hidden md:block">
+     <!-- <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_u4yrau.json" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player> -->
+     
+
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section id="overview" class="py-20 px-6 bg-gray-900/50">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold mb-8 text-pink-400">📖 Project Overview</h3>
+      <p class="text-gray-300 mb-6">The Fake News Classifier is a deep learning-based NLP project aimed at detecting and classifying news articles as fake or real. It leverages advanced neural networks, transformer models, and linguistic feature engineering to combat misinformation in the media and entertainment domain.</p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700">
+          <h4 class="text-xl font-semibold mb-4 text-pink-300">🎯 Skills Takeaway</h4>
+          <ul class="list-disc list-inside space-y-2 text-gray-300">
+            <li>Data Cleaning & Preprocessing</li>
+            <li>Data Augmentation</li>
+            <li>Feature Extraction</li>
+            <li>Sentiment Analysis</li>
+            <li>Model Development & Training</li>
+            <li>Hyper-parameter Tuning</li>
+            <li>NLP Techniques</li>
+          </ul>
+        </div>
+        <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700">
+          <h4 class="text-xl font-semibold mb-4 text-pink-300">🏢 Business Use Case</h4>
+          <p class="text-gray-300">The rise of fake news threatens digital platforms by spreading misinformation and influencing public opinion. This project develops a scalable classifier to detect misleading articles, helping media companies and social platforms automatically flag harmful content.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow -->
+  <section id="workflow" class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold mb-12 text-pink-400">⚙️ Workflow & Methodology</h3>
+      <ol class="relative border-l border-gray-700 space-y-10 ml-4">
+        <li class="ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-pink-500 rounded-full"></span>
+          <h4 class="text-xl font-semibold text-white">Data Collection & Preprocessing</h4>
+          <p class="text-gray-300 mt-2">Download dataset, clean text, handle missing values, and preprocess with NLP techniques.</p>
+        </li>
+        <li class="ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-pink-500 rounded-full"></span>
+          <h4 class="text-xl font-semibold text-white">Exploratory Data Analysis</h4>
+          <p class="text-gray-300 mt-2">Analyze distributions, relationships, and patterns within text data.</p>
+        </li>
+        <li class="ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-pink-500 rounded-full"></span>
+          <h4 class="text-xl font-semibold text-white">Feature Engineering</h4>
+          <p class="text-gray-300 mt-2">Generate embeddings, TF-IDF vectors, and sentiment-based features for better predictions.</p>
+        </li>
+        <li class="ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-pink-500 rounded-full"></span>
+          <h4 class="text-xl font-semibold text-white">Model Development</h4>
+          <p class="text-gray-300 mt-2">Build baseline models, RNNs, LSTMs, GRUs, and Transformer-based models like BERT.</p>
+        </li>
+        <li class="ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-pink-500 rounded-full"></span>
+          <h4 class="text-xl font-semibold text-white">Evaluation & Tuning</h4>
+          <p class="text-gray-300 mt-2">Compare models using F1-score, precision, recall, and optimize hyperparameters.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="results" class="py-20 px-6 bg-gray-900/60">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold mb-8 text-pink-400">📊 Results</h3>
+      <p class="text-gray-300 mb-4">The Fake News Classifier achieves a high F1-score, balancing precision and recall effectively. It can handle large-scale diverse datasets and provide reliable predictions that can be integrated into real-world news platforms.</p>
+    </div>
+  </section>
+
+  <!-- Dataset -->
+  <section id="dataset" class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold mb-8 text-pink-400">📂 Dataset</h3>
+      <p class="text-gray-300 mb-6">This project uses the <strong>WELFake Dataset</strong> containing 72,134 news articles (35,028 real and 37,106 fake). It merges data from Kaggle, McIntire, Reuters, and BuzzFeed Political to ensure robustness and prevent overfitting.</p>
+      <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700">
+        <h4 class="text-xl font-semibold text-pink-300 mb-3">Dataset Details</h4>
+        <ul class="list-disc list-inside text-gray-300 space-y-2">
+          <li>Serial Number – Unique identifier</li>
+          <li>Title – News headline</li>
+          <li>Text – Full news article</li>
+          <li>Label – 0 = Fake, 1 = Real</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section id="tech" class="py-20 px-6 bg-gray-900/50">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold mb-8 text-pink-400">🛠️ Tech Stack</h3>
+      <div class="flex flex-wrap gap-3">
+        <span class="px-4 py-2 bg-gray-800 rounded-xl border border-gray-700 text-pink-300">NLP</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-xl border border-gray-700 text-pink-300">TF-IDF</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-xl border border-gray-700 text-pink-300">Word2Vec</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-xl border border-gray-700 text-pink-300">GloVe</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-xl border border-gray-700 text-pink-300">BERT</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-xl border border-gray-700 text-pink-300">LSTM</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-xl border border-gray-700 text-pink-300">GRU</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 text-center bg-gray-950 border-t border-gray-800">
+    <p class="text-gray-400">© 2025 Vishal Kanna B. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

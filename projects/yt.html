@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Data Pipeline — Project Detail</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lottie (optional) -->
+  <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"></script>
+
+  <meta name="description" content="Collect, store, and visualize YouTube data using Python, MySQL, and Streamlit." />
+</head>
+<body class="bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white selection:bg-pink-500/30">
+
+  <!-- Sticky Top Bar -->
+  <header class="sticky top-0 z-40 bg-black/50 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <button onclick="history.back()" class="px-3 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition">
+        ← Back
+      </button>
+      <nav class="hidden sm:flex gap-6 text-sm">
+        <a href="#overview" class="hover:text-pink-300">Overview</a>
+        <a href="#features" class="hover:text-pink-300">Features</a>
+        <a href="#workflow" class="hover:text-pink-300">Workflow</a>
+        <a href="#setup" class="hover:text-pink-300">Setup</a>
+        <a href="#screens" class="hover:text-pink-300">Screens</a>
+        <a href="#stack" class="hover:text-pink-300">Tech Stack</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="overview" class="relative">
+    <div class="max-w-6xl mx-auto px-4 py-14 md:py-20 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+          🎥 YouTube <span class="text-pink-400">Data Pipeline</span>
+        </h1>
+        <p class="text-gray-300 mt-4 text-lg">
+          Collects, stores, and visualizes YouTube channel & video data using
+          <span class="text-pink-300 font-semibold">Python</span>, 
+          <span class="text-pink-300 font-semibold">MySQL</span>, and 
+          <span class="text-pink-300 font-semibold">Streamlit</span>.
+        </p>
+
+        <!-- Badges -->
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span class="px-3 py-1 rounded-full text-sm bg-pink-600/20 border border-pink-600/40">Data Collection</span>
+          <span class="px-3 py-1 rounded-full text-sm bg-blue-600/20 border border-blue-600/40">API Integration</span>
+          <span class="px-3 py-1 rounded-full text-sm bg-emerald-600/20 border border-emerald-600/40">SQL Modeling</span>
+          <span class="px-3 py-1 rounded-full text-sm bg-violet-600/20 border border-violet-600/40">Streamlit UI</span>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-4 mt-8">
+          <a href="https://github.com/vishalkannsgit/YouTube-Data-Harvesting-and-Warehousing-using-SQL-and-Streamlit" target="_blank"
+            class="px-5 py-3 rounded-xl bg-pink-600 hover:bg-pink-500 shadow-lg shadow-pink-600/30 transition font-semibold">
+            🔗 GitHub Repository
+          </a>
+          <!-- Replace href with your deployed demo if available -->
+          <a href="#" class="px-5 py-3 rounded-xl border border-white/20 hover:bg-white/10 transition font-semibold">
+            🚀 Live Demo
+          </a>
+        </div>
+      </div>
+
+      <!-- Lottie / Visual -->
+      <div class="relative flex items-center justify-center">
+        <div class="absolute -inset-8 rounded-3xl bg-pink-500/10 blur-3xl"></div>
+        <dotlottie-wc
+          src="https://lottie.host/20605a19-b09e-4c07-bd80-926a572b2997/BuBQLhxhCg.lottie"
+          style="width: 320px; height: 320px"
+          autoplay loop speed="1">
+        </dotlottie-wc>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Summary Cards -->
+  <section class="max-w-6xl mx-auto px-4 pb-6">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-gray-900/70 border border-white/10 rounded-2xl p-5">
+        <p class="text-gray-400 text-sm">Domain</p>
+        <p class="text-lg font-semibold">Social Media Analytics</p>
+      </div>
+      <div class="bg-gray-900/70 border border-white/10 rounded-2xl p-5">
+        <p class="text-gray-400 text-sm">Data Store</p>
+        <p class="text-lg font-semibold">MySQL</p>
+      </div>
+      <div class="bg-gray-900/70 border border-white/10 rounded-2xl p-5">
+        <p class="text-gray-400 text-sm">Frontend</p>
+        <p class="text-lg font-semibold">Streamlit</p>
+      </div>
+      <div class="bg-gray-900/70 border border-white/10 rounded-2xl p-5">
+        <p class="text-gray-400 text-sm">API</p>
+        <p class="text-lg font-semibold">YouTube Data API v3</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold mb-6">✨ Features</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-gray-900/70 border border-white/10 rounded-2xl p-6">
+        <h3 class="text-xl font-semibold text-yellow-300">Channel Insights</h3>
+        <p class="text-gray-300 mt-2">Fetch and store channel metadata (title, subscribers, views, etc.).</p>
+      </div>
+      <div class="bg-gray-900/70 border border-white/10 rounded-2xl p-6">
+        <h3 class="text-xl font-semibold text-yellow-300">Video Harvesting</h3>
+        <p class="text-gray-300 mt-2">Collect video lists & details (title, stats, publish date) into MySQL.</p>
+      </div>
+      <div class="bg-gray-900/70 border border-white/10 rounded-2xl p-6">
+        <h3 class="text-xl font-semibold text-yellow-300">Interactive UI</h3>
+        <p class="text-gray-300 mt-2">Streamlit interface to explore, filter, and visualize results.</p>
+      </div>
+      <div class="bg-gray-900/70 border border-white/10 rounded-2xl p-6">
+        <h3 class="text-xl font-semibold text-yellow-300">Reusable Pipeline</h3>
+        <p class="text-gray-300 mt-2">Modular code for fetching, persisting, and presenting data.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow -->
+  <section id="workflow" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold mb-6">⚙️ Workflow</h2>
+    <ol class="relative border-s border-white/10 ms-4 space-y-8">
+      <li class="ms-6">
+        <span class="absolute -start-3 top-1.5 h-6 w-6 rounded-full bg-pink-500/70"></span>
+        <h4 class="text-xl font-semibold">Data Collection</h4>
+        <p class="text-gray-300">Use YouTube Data API to fetch channel & video info.</p>
+      </li>
+      <li class="ms-6">
+        <span class="absolute -start-3 top-1.5 h-6 w-6 rounded-full bg-blue-500/70"></span>
+        <h4 class="text-xl font-semibold">Database Modeling</h4>
+        <p class="text-gray-300">Create normalized tables in MySQL for channels, videos, stats.</p>
+      </li>
+      <li class="ms-6">
+        <span class="absolute -start-3 top-1.5 h-6 w-6 rounded-full bg-emerald-500/70"></span>
+        <h4 class="text-xl font-semibold">ETL / Loading</h4>
+        <p class="text-gray-300">Transform raw API payloads and persist records safely.</p>
+      </li>
+      <li class="ms-6">
+        <span class="absolute -start-3 top-1.5 h-6 w-6 rounded-full bg-violet-500/70"></span>
+        <h4 class="text-xl font-semibold">Visualization</h4>
+        <p class="text-gray-300">Serve insights & tables via Streamlit dashboards.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Getting Started / Setup -->
+  <section id="setup" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold mb-6">🧰 Getting Started</h2>
+    <div class="bg-gray-900/70 border border-white/10 rounded-2xl p-6 space-y-6">
+      <ol class="list-decimal list-inside text-gray-200 space-y-2">
+        <li>Clone the repository & enter the folder.</li>
+        <li>Install Python dependencies.</li>
+        <li>Configure MySQL connection & create DB.</li>
+        <li>Get a YouTube API key and add it to your config.</li>
+        <li>Run the Streamlit app.</li>
+      </ol>
+
+      <div class="space-y-4">
+        <div>
+          <p class="text-gray-300 mb-2">Install requirements:</p>
+          <pre class="bg-black/50 border border-white/10 rounded-xl p-4 overflow-x-auto text-sm"><code>pip install -r requirements.txt</code></pre>
+        </div>
+        <div>
+          <p class="text-gray-300 mb-2">Run the application:</p>
+          <pre class="bg-black/50 border border-white/10 rounded-xl p-4 overflow-x-auto text-sm"><code>streamlit run app.py</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots / Demo -->
+  <section id="screens" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold mb-6">🖼 Screens & Demo</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Replace src with your real screenshots -->
+      <img src="https://via.placeholder.com/600x350.png?text=Streamlit+Dashboard" class="rounded-xl border border-white/10 shadow" alt="Streamlit dashboard" loading="lazy">
+      <img src="https://via.placeholder.com/600x350.png?text=Channel+Details" class="rounded-xl border border-white/10 shadow" alt="Channel details" loading="lazy">
+      <img src="https://via.placeholder.com/600x350.png?text=Video+Table" class="rounded-xl border border-white/10 shadow" alt="Video table" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section id="stack" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold mb-6">🧱 Tech Stack</h2>
+    <div class="flex flex-wrap gap-3">
+      <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20">Python</span>
+      <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20">Requests</span>
+      <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20">YouTube Data API v3</span>
+      <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20">MySQL</span>
+      <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20">SQLAlchemy / MySQL Connector</span>
+      <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20">Streamlit</span>
+      <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20">Pandas</span>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <section class="max-w-6xl mx-auto px-4 pb-16">
+    <div class="bg-gradient-to-r from-pink-600/20 to-violet-600/20 border border-white/10 rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <h3 class="text-2xl font-bold">Want to see the code or try it?</h3>
+        <p class="text-gray-300 mt-1">Grab the repo or ping me for a live walkthrough.</p>
+      </div>
+      <div class="flex gap-4">
+        <a href="https://github.com/vishalkannsgit/YouTube-Data-Harvesting-and-Warehousing-using-SQL-and-Streamlit" target="_blank"
+          class="px-5 py-3 rounded-xl bg-pink-600 hover:bg-pink-500 shadow-lg shadow-pink-600/30 transition font-semibold">
+          🔗 GitHub
+        </a>
+        <a href="#contact" class="px-5 py-3 rounded-xl border border-white/20 hover:bg-white/10 transition font-semibold">
+          ✉️ Contact
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- (Optional) Contact Anchor to reuse site-wide contact -->
+  <div id="contact"></div>
+
+  <!-- Small helper for smooth-scroll if needed -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          document.querySelector(href)?.scrollIntoView({behavior: 'smooth'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
